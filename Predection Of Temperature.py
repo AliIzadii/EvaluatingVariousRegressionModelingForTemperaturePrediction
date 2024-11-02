@@ -27,7 +27,7 @@ features = list(map(lambda x: x[0],
                             )
                        )  
                    )
-features = [feature for feature in features if feature != 'temperature_celsius']
+features = [feature for feature in features if feature not in ['temperature_celsius', 'temperature_fahrenheit']]
 
 y = df['temperature_celsius'].values.reshape(-1, 1)
 x = df[features]
